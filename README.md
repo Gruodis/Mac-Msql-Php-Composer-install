@@ -10,6 +10,8 @@ Just download 86-64 version and istall
 
 # 2 Php
 
+- https://www.geeksforgeeks.org/how-to-install-php-on-macos/?ref=gcse
+
 ```bash
 Caveats
 To enable PHP in Apache add the following to httpd.conf and restart Apache:
