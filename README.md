@@ -3,20 +3,18 @@ Install Mysql, Php and Composer on Mac
 
 # 0 Homebrew
 
-Install Homebrew
+### Install Homebrew
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+### Install wget
 ```bash
 brew install wget
 ```
 
-Install wget
-```bash
-brew install wget
-```
-Oh My Zsh:
+
+### Oh My Zsh:
 ```bash
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
