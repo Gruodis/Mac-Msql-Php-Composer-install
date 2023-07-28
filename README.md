@@ -3,7 +3,7 @@ Install Mysql, Php and Composer on Mac
 
 # 0 Homebrew
 
-### Install Homebrew
+#### Install Homebrew
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
