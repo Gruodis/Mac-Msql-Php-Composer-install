@@ -1,5 +1,5 @@
 <h1 align="center">Get MAC ready for development</h1>
-Install Mysql, Php and Composer on Mac
+<p align="center">Install Homebrew, Wget, "Oh My Zsh", Mysql, Php and Composer</p>
 
 <br>
 <br>
