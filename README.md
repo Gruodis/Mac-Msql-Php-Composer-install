@@ -29,6 +29,8 @@ https://www.geeksforgeeks.org/how-to-install-mysql-on-macos/
 ## REBOOT after install
 
 
+<hr>
+
 
 # 2 Php
 
