@@ -8,13 +8,13 @@ Install Mysql, Php and Composer on Mac
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Install wget
+#### Install wget
 ```bash
 brew install wget
 ```
 
 
-### Oh My Zsh:
+#### Oh My Zsh:
 ```bash
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
@@ -26,7 +26,7 @@ Just download 86-64 version and istall
 
 https://www.geeksforgeeks.org/how-to-install-mysql-on-macos/
 
-### REBOOT after install
+## REBOOT after install
 
 
 
