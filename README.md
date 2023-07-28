@@ -27,6 +27,12 @@
     ```bash
     eval "$(/opt/homebrew/bin/brew shellenv)"
     ```
+- Verify:
+
+  
+    ```bash
+    brew help
+    ```
 
 #### Install wget
 ```bash
@@ -49,6 +55,36 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 Just download 86-64 version and istall
 
 https://www.geeksforgeeks.org/how-to-install-mysql-on-macos/
+
+- Open the terminal.
+
+- Type:
+- ```bash nano ~/.zshrc``` and hit Enter.
+
+The terminal will then open the .zshrc file in the nano text editor.
+
+You can navigate through the file using the arrow keys. To add the line for MySQL, navigate to the bottom of the file or any place where you'd like to put your aliases or environment variables, and then add the following line:
+
+```bash
+export PATH=$PATH:/usr/local/mysql/bin
+```
+
+This line adds /usr/local/mysql/bin to your PATH, so you will be able to run mysql from any directory.
+
+After you've added the line:
+
+- Press Control+O to save the changes.
+- Press Enter to confirm the file name.
+- Press Control+X to exit nano.
+
+Finally, for the changes to take effect, you'll need to restart your terminal or run:
+
+```bash
+source ~/.zshrc.
+```
+
+Now, you should be able to just type mysql -u root -p to access your MySQL command line.
+
 
 ## REBOOT after install
 
