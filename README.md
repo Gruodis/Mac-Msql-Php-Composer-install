@@ -1,4 +1,4 @@
-# Mac-Msql-Php-Composer-install
+<h1 align="center">Get MAC ready for development</h1>
 Install Mysql, Php and Composer on Mac
 
 <br>
