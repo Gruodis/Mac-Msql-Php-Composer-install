@@ -18,12 +18,12 @@
 
 - In your terminal, type the following command to add Homebrew to your .zprofile:
 
-
     ```bash
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
     ```
 
 - Next, apply the changes to your current shell session with this command:
+  
     ```bash
     eval "$(/opt/homebrew/bin/brew shellenv)"
     ```
