@@ -96,7 +96,7 @@ Now, you should be able to just type mysql -u root -p to access your MySQL comma
 
 # 2 Php
 
-- https://www.geeksforgeeks.org/how-to-install-php-on-macos/?ref=gcse
+- https://www.geeksforgeeks.org/how-to-install-php-on-macos/
 
 ```bash
 Caveats
@@ -166,4 +166,64 @@ Or, if you don't want/need a background service you can just run:
 
 ```
 
+# Valet
 
+```bash
+brew update
+```
+### if Composer and Php installed
+
+```bash
+nano ~/.zshrc
+```
+
+```bash
+export PATH=$PATH:$HOME/.composer/vendor/bin
+```
+
+```bash
+composer global require laravel/valet
+```
+
+```bash
+valet use php@8.1
+```
+
+```bash
+composer global update
+```
+
+```bash
+valet install
+```
+
+```bash
+composer global require laravel/installer
+```
+
+```bash
+npx update-browserslist-db@latest
+```
+
+### Add all project to Valet
+
+
+Inside root directory where all you projects are for example "PhpStormProjects", run:
+
+```bash
+valet park
+```
+
+to unpark run:
+
+```bash
+valet unpark
+```
+
+### if you want to add SSL
+
+Inside project root directory run:
+
+```bash
+valet secure
+```
