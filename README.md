@@ -168,6 +168,9 @@ Or, if you don't want/need a background service you can just run:
 
 # Valet
 
+- https://laravel.com/docs/10.x/valet
+- https://gist.github.com/bradtraversy/b58f74cd863a465068eaeaae1544d9be
+
 ```bash
 brew update
 ```
