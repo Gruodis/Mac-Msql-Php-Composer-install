@@ -98,6 +98,42 @@ Now, you should be able to just type mysql -u root -p to access your MySQL comma
 
 - https://www.geeksforgeeks.org/how-to-install-php-on-macos/
 
+- Create script to change php version globaly:
+
+
+```bash
+
+# Default PHP Version (e.g. 8.1) - You can set this to whatever you like as default
+export PATH="/opt/homebrew/opt/php@8.1/bin:/opt/homebrew/opt/php@8.1/sbin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/php@8.1/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/php@8.1/include"
+
+switchphp() {
+    local version="$1"
+
+    if brew --prefix php@"$version" > /dev/null 2>&1; then
+        brew unlink php@$(php -v | head -n 1 | cut -d ' ' -f 2 | cut -d '.' -f 1,2) &> /dev/null
+        brew link --overwrite --force php@"$version"
+
+        # Remove old PHP configurations from ~/.zshrc
+        sed -i '' '/^export PATH="\/opt\/homebrew\/opt\/php/d' ~/.zshrc
+        sed -i '' '/^export LDFLAGS="-L\/opt\/homebrew\/opt\/php/d' ~/.zshrc
+        sed -i '' '/^export CPPFLAGS="-I\/opt\/homebrew\/opt\/php/d' ~/.zshrc
+
+        # Append new PHP configurations to ~/.zshrc
+        echo "export PATH=\"/opt/homebrew/opt/php@$version/bin:/opt/homebrew/opt/php@$version/sbin:\$PATH\"" >> ~/.zshrc
+        echo "export LDFLAGS=\"-L/opt/homebrew/opt/php@$version/lib\"" >> ~/.zshrc
+        echo "export CPPFLAGS=\"-I/opt/homebrew/opt/php@$version/include\"" >> ~/.zshrc
+
+        # Inform the user to reload .zshrc
+        echo "Switched to PHP $version"
+        echo "Please run 'source ~/.zshrc' to apply changes to the current session."
+    else
+        echo "PHP version $version is not installed"
+    fi
+}
+```
+
 ```bash
 Caveats
 To enable PHP in Apache add the following to httpd.conf and restart Apache:
