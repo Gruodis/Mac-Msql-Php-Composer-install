@@ -101,6 +101,14 @@ Now, you should be able to just type mysql -u root -p to access your MySQL comma
 - Create script to change php version globaly:
 
 
+DONT forget to restart ```source ~/.zshrc```
+
+Run script:
+
+```bash
+switchphp 7.2
+```
+
 ```bash
 
 # Default PHP Version (e.g. 8.1) - You can set this to whatever you like as default
